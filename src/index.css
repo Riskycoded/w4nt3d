@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Teko:wght@400;500;600;700&family=Inter:wght@400;500;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --color-brand: #e60000;
+  --font-heading: "Teko", sans-serif;
+  --font-body: "Inter", sans-serif;
+  --color-dark: #0a0a0a;
+  --color-dark-surface: #111111;
+}
+
+body {
+  @apply bg-black text-white font-body overflow-x-hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  @apply font-heading uppercase tracking-wide;
+}
+
+/* Custom Utilities */
+.text-brand {
+  color: var(--color-brand);
+}
+.bg-brand {
+  background-color: var(--color-brand);
+}
+
+/* Lightbox Animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes scaleUp {
+  from { transform: scale(0.95); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.25s ease-out forwards;
+}
+
+.animate-scale-up {
+  animation: scaleUp 0.3s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Smoke Drift Animations */
+@keyframes smokeDrift-1 {
+  0% {
+    transform: translate(0, 0) scale(0.6) rotate(0deg);
+    opacity: 0;
+  }
+  15% {
+    opacity: 0.22;
+  }
+  85% {
+    opacity: 0.15;
+  }
+  100% {
+    transform: translate(-140px, -45px) scale(2.4) rotate(120deg);
+    opacity: 0;
+  }
+}
+
+@keyframes smokeDrift-2 {
+  0% {
+    transform: translate(10px, 5px) scale(0.8) rotate(0deg);
+    opacity: 0;
+  }
+  20% {
+    opacity: 0.26;
+  }
+  80% {
+    opacity: 0.18;
+  }
+  100% {
+    transform: translate(-180px, -30px) scale(3.0) rotate(-90deg);
+    opacity: 0;
+  }
+}
+
+@keyframes smokeDrift-3 {
+  0% {
+    transform: translate(-10px, -5px) scale(0.5) rotate(0deg);
+    opacity: 0;
+  }
+  10% {
+    opacity: 0.18;
+  }
+  90% {
+    opacity: 0.12;
+  }
+  100% {
+    transform: translate(-110px, -60px) scale(1.8) rotate(60deg);
+    opacity: 0;
+  }
+}
+
+.smoke-particle {
+  position: absolute;
+  width: 90px;
+  height: 90px;
+  background: radial-gradient(circle, rgba(230, 0, 0, 0.12) 0%, rgba(100, 100, 100, 0.08) 30%, transparent 70%);
+  border-radius: 50%;
+  filter: blur(12px);
+  pointer-events: none;
+  mix-blend-mode: screen;
+}
+
+.smoke-1 {
+  animation: smokeDrift-1 4.2s infinite linear;
+}
+
+.smoke-2 {
+  animation: smokeDrift-2 5.0s infinite linear 1.2s;
+}
+
+.smoke-3 {
+  animation: smokeDrift-3 5.8s infinite linear 2.5s;
+}
