@@ -164,13 +164,13 @@ const Gallery = () => {
               <img
                 src={item.src}
                 alt={item.alt}
-                className="w-full h-full object-cover grayscale brightness-[0.45] contrast-[1.15] scale-100 group-hover:scale-105 group-hover:grayscale-0 group-hover:brightness-[0.9] transition-all duration-700 ease-out z-10"
+                className="w-full h-full object-cover contrast-[1.15] scale-100 brightness-[0.85] grayscale-0 [@media(hover:hover)]:grayscale [@media(hover:hover)]:brightness-[0.45] group-hover:scale-105 group-hover:grayscale-0 group-hover:brightness-[0.9] transition-all duration-700 ease-out z-10"
               />
 
               {/* HUD / Details Overlay */}
               <div className="absolute inset-0 z-20 flex flex-col justify-between p-6 bg-gradient-to-t from-black via-transparent to-black/40 pointer-events-none">
                 {/* Top HUD elements */}
-                <div className="flex justify-between items-center opacity-40 group-hover:opacity-100 transition-opacity duration-500">
+                <div className="flex justify-between items-center opacity-100 [@media(hover:hover)]:opacity-40 group-hover:opacity-100 transition-opacity duration-500">
                   <div className="flex items-center gap-2">
                     <span className="w-1.5 h-1.5 rounded-full bg-brand animate-ping" />
                     <span className="text-[10px] tracking-[0.2em] font-heading font-semibold text-white">LIVE_FEED</span>
@@ -183,7 +183,7 @@ const Gallery = () => {
                   <h3 className="text-2xl md:text-3xl font-heading font-bold text-white tracking-wider leading-none">
                     {item.title}
                   </h3>
-                  <div className="flex items-center justify-between mt-2 pt-2 border-t border-white/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                  <div className="flex items-center justify-between mt-2 pt-2 border-t border-white/10 opacity-100 [@media(hover:hover)]:opacity-0 group-hover:opacity-100 transition-opacity duration-500">
                     <span className="text-[10px] tracking-[0.15em] font-heading text-gray-400">
                       {item.spec}
                     </span>

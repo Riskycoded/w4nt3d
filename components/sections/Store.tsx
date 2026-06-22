@@ -91,7 +91,7 @@ const Store = () => {
                 <img 
                   src={item.src} 
                   alt={item.name} 
-                  className="w-full h-full object-cover grayscale brightness-[0.7] group-hover:scale-105 group-hover:grayscale-0 group-hover:brightness-[0.95] transition-all duration-700 ease-out"
+                  className="w-full h-full object-cover brightness-[0.9] grayscale-0 [@media(hover:hover)]:grayscale [@media(hover:hover)]:brightness-[0.7] group-hover:scale-105 group-hover:grayscale-0 group-hover:brightness-[0.95] transition-all duration-700 ease-out"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-black/20 opacity-60 pointer-events-none" />
               </div>
