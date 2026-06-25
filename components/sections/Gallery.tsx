@@ -104,6 +104,16 @@ const galleryItems: GalleryItem[] = [
     heightClass: 'h-[450px]',
     offsetClass: 'lg:-translate-y-6',
   },
+  {
+    id: 10,
+    src: '/runw.jpeg',
+    alt: 'W4NT3D WILL RUN custom license plates',
+    tag: 'W4N.PLATES',
+    title: 'WILL RUN PLATES',
+    spec: 'IDENTITY // CUSTOM TAGS',
+    heightClass: 'h-[450px]',
+    offsetClass: '',
+  },
 ];
 
 const Gallery = () => {
